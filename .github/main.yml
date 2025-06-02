@@ -1,0 +1,20 @@
+name: Run Custom Greet Action
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    name: Say Hello and Add Numbers
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run custom greet action
+        uses: ./greet-action
+        with:
+          name: "Raju"
+          a: 10
+          b: 20

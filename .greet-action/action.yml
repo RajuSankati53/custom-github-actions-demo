@@ -1,0 +1,15 @@
+name: "Custom Greet Action"
+description: "Greets a user and adds two numbers"
+inputs:
+  name:
+    description: "The name of the user"
+    required: true
+  a:
+    description: "First number"
+    required: true
+  b:
+    description: "Second number"
+    required: true
+runs:
+  using: "node16"
+  main: "index.js"
